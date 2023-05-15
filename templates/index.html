@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Travel Video Landing Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css')}}">
+
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <h1 class="logo"><span style="letter-spacing: 5px;padding: 5px 2px 5px 2px;font-size: x-large;">PRO</span><span style="background-color: aliceblue;color: black;letter-spacing: 3.5px;padding: 5px 2px 5px 2px;font-size: x-large;">FIND</span></h2>
+      <div class="toggle"></div>
+    </header>
+    <video src="https://traversymedia.com/downloads/videos/explore.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>Unleash Potential  </h2><br>
+      <h3>With Our Profile Builder</h3>
+      <p class="home-content">Introducing our groundbreaking profile builder for faculty – the essential tool for boosting academic visibility and fostering professional growth. Create captivating profiles effortlessly, showcasing expertise, accomplishments, and research contributions, with customizable layouts, multimedia integration, and easy sharing.</p>
+      <a href="/login">Login</a>
+    </div>
+    <ul class="social">
+      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+<!-- partial -->
+  <script  src="{{ url_for('static', filename='js/script_index.js')}}"></script>
+
+</body>
+</html>
