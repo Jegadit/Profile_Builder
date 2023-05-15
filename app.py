@@ -2,19 +2,19 @@ import os
 import json
 from flask import Flask, render_template, redirect, url_for, request, session, jsonify
 from datetime import datetime
-import pymysql  
+import pymysql
 # from textwrap import indent
 
 application = Flask(__name__)
 app = application
 app.secret_key = 'AshbornIsLegend'
 
-mydb = pymysql.connect(
-    host="localhost",
-    user="root",
-    passwd="",
-    database="softareeng"
-)
+# mydb = pymysql.connect(
+#     host="localhost",
+#     user="root",
+#     passwd="",
+#     database="softareeng"
+# )
 
 
 @app.route("/login", methods=['POST', 'GET'])
@@ -26,9 +26,12 @@ def login():
 
         errorcode = ""
 
-        loginpart = mydb.cursor()
-        loginpart.execute("SELECT id FROM login WHERE uname = %s AND passwd = %s", (user, passwd))
-        loginresult = loginpart.fetchall()
+        # loginpart = mydb.cursor()
+        # loginpart.execute(
+        #     "SELECT id FROM login WHERE uname = %s AND passwd = %s", (user, passwd))
+        # loginresult = loginpart.fetchall()
+
+        loginresult = 1
 
         if loginresult:
             session["user"] = loginresult[0][0]
@@ -36,7 +39,7 @@ def login():
         else:
             errorcode = "Invalid Username or Password"
             return render_template('login.html', errorcode=errorcode)
-    
+
     else:
         return render_template("login.html")
 
@@ -61,4 +64,5 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run()
