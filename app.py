@@ -9,12 +9,12 @@ application = Flask(__name__)
 app = application
 app.secret_key = 'AshbornIsLegend'
 
-# mydb = pymysql.connect(
-#     host="localhost",
-#     user="root",
-#     passwd="",
-#     database="softareeng"
-# )
+mydb = pymysql.connect(
+    host="localhost",
+    user="root",
+    passwd="",
+    database="softareeng"
+)
 
 @app.route("/")
 def home():
@@ -29,12 +29,10 @@ def login():
 
         errorcode = ""
 
-        # loginpart = mydb.cursor()
-        # loginpart.execute(
-        #     "SELECT id FROM login WHERE uname = %s AND passwd = %s", (user, passwd))
-        # loginresult = loginpart.fetchall()
-
-        loginresult = 1
+        loginpart = mydb.cursor()
+        loginpart.execute(
+            "SELECT id FROM login WHERE uname = %s AND passwd = %s", (user, passwd))
+        loginresult = loginpart.fetchall()
 
         if loginresult:
             session["user"] = loginresult[0][0]
