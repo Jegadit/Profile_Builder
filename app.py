@@ -8,12 +8,20 @@ import pymysql
 application = Flask(__name__)
 app = application
 app.secret_key = 'AshbornIsLegend'
+email = ''
+
+mydb = pymysql.connect(
+    host="profilebuilder.cfr7joesroih.us-east-1.rds.amazonaws.com",
+    user="admin",
+    passwd="Oombu1234",
+    database="SoftareEng"
+)
 
 # mydb = pymysql.connect(
 #     host="localhost",
 #     user="root",
 #     passwd="",
-#     database="softareeng"
+#     database="SoftareEng"
 # )
 
 @app.route("/")
@@ -29,15 +37,16 @@ def login():
 
         errorcode = ""
 
-        # loginpart = mydb.cursor()
-        # loginpart.execute(
-        #     "SELECT id FROM login WHERE uname = %s AND passwd = %s", (user, passwd))
-        # loginresult = loginpart.fetchall()
-
-        loginresult = 1
+        loginpart = mydb.cursor()
+        loginpart.execute(
+            "SELECT email FROM Login WHERE uname = %s AND passwd = %s", (user, passwd))
+        loginresult = loginpart.fetchall()
+        print(loginresult)
+        # loginresult = 1
 
         if loginresult:
             session["user"] = loginresult[0][0]
+            email = loginresult[0][0]
             return redirect(url_for("user"))
         else:
             errorcode = "Invalid Username or Password"
@@ -50,7 +59,8 @@ def login():
 @app.route("/user")
 def user():
     if 'user' in session:
-        return render_template("os.html")
+        return 'Hello world!'
+        # return render_template("os.html")
     else:
         return redirect(url_for("login"))
 
