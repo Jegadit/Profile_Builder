@@ -13,17 +13,17 @@
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
+                <h1>Change Password</h1>
+                &nbsp;
                 <input type="email" placeholder="Email" />
+                <input type="number" placeholder="OTP" />
                 <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <input type="password" placeholder="Retype Password" />
+                &nbsp;
+                <div style="display: flex; flex-direction: row; gap: 10px;">
+                    <button type="button">OTP</button>
+                    <button>Change</button>
+                </div>
             </form>
         </div>
         <div class="form-container sign-in-container">
@@ -47,14 +47,16 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <img src = "{{ url_for('static', filename='res/logo.png')}}" alt="LOGO" style="height: 80px;"/>
+                    <img src="{{ url_for('static', filename='res/logo.png')}}" alt="LOGO" style="height: 80px;" />
                     <br><br>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <img src = "{{ url_for('static', filename='res/logo.png')}}" alt="LOGO" style="height: 80px;"/>
-                    <br><br>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <img src="{{ url_for('static', filename='res/logo.png')}}" alt="LOGO" style="height: 80px;" />
+                    <br>
+                    <span style="color: white;">Change Password?</span>
+                    <br>
+                    <button class="ghost" id="signUp">Change</button>
                 </div>
             </div>
         </div>
