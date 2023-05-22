@@ -5,10 +5,12 @@ from datetime import datetime
 import pymysql
 # from textwrap import indent
 
+
 application = Flask(__name__)
 app = application
 app.secret_key = 'AshbornIsLegend'
 email = ''
+
 
 mydb = pymysql.connect(
     host="profilebuilder.cfr7joesroih.us-east-1.rds.amazonaws.com",
@@ -24,9 +26,11 @@ mydb = pymysql.connect(
 #     database="SoftareEng"
 # )
 
+
 @app.route("/")
 def home():
     return render_template('index.html')
+
 
 @app.route("/login", methods=['POST', 'GET'])
 def login():
@@ -68,6 +72,11 @@ def user():
 @app.route("/status")
 def status():
     return jsonify(status="active")
+
+
+@app.route("/sysinfo")
+def sysinfo():
+    return json.loads('hbhb')
 
 
 @app.route("/logout")
