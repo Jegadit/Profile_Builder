@@ -1,30 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/esm/ionicons.min.js" integrity="sha512-2ySmquu6HK3CAvwLllh0R8K8buFPMZsUwWLZIlB7WW8c8ilUtoNyhsmEsQn2U0IV1USr2Oc/9DJzlr4cxAbuxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <style>
-        * {
+        *{
             font-family: 'Poppins', sans-serif;
         }
-
-        .navbar {
+        .navbar{
             font-family: 'Poppins', sans-serif;
             box-shadow: 1.5px 1.5px 15px 4px rgba(2, 2, 2, 0.275);
             border-radius: 15px;
@@ -33,66 +29,59 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-
+            
         }
-
-        h2 {
+        h2{
             letter-spacing: 5px;
         }
-
-        li {
+        li{
 
             list-style: none;
             display: flex;
             flex-direction: row;
-
+            
         }
-
-        li>ul {
+        li>ul{
             list-style: none;
 
         }
-
-        a {
+        a{
             text-decoration: none;
             color: black;
         }
-
-        span {
+        span{
             background-color: black;
             color: whitesmoke;
             letter-spacing: 7px;
             padding-left: 7px;
         }
-
-        .buttons {
+        .buttons{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
-
-        .buttons>li>ul:hover {
-            color: rgb(0, 0, 0);
+        .buttons>li>ul:hover{
+            color:rgb(0, 0, 0);
             font-weight: bold;
             font-stretch: ultra-expanded;
             font-size: 16px;
             transition: 400ms;
             text-shadow: 10px;
             font-family: 'Montserrat', sans-serif;
-
+            
         }
-
-        .logo {
+        .logo{
             justify-content: start;
         }
 
 
-        div[class="img-cont"] {
-            margin-top: 30px;
+        div[class="img-cont"]{
+            margin-top:30px;
             width: 100%;
-            background-image: linear-gradient(to bottom,
-                    rgba(0, 0, 0, 0.804),
-                    rgba(3, 3, 3, 0.797)),
+            background-image:  linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.804),
+                rgba(3, 3, 3, 0.797)),
                 url("https://scontent.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/312024007_585866156669094_5816331640671048446_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=TL9mivhd_dQAX84tV4-&_nc_ht=scontent.fmaa8-1.fna&oh=00_AfDtbQrK6yTRXoj-W71l9v9SxA-r5GE7XMdRaNhG4_BV9Q&oe=646FC4B7");
             background-repeat: no-repeat;
             background-size: cover;
@@ -101,24 +90,21 @@
             padding: 140px 0px 140px 0px;
 
         }
-
-        div[class="txt"] {
+        div[class="txt"]{
             height: 400px;
             top: 50px;
             text-align: center;
             color: aliceblue;
         }
-
-        div[class="txt"]>h2 {
+        div[class="txt"]>h2{
             margin-top: 25px;
             font-size: 50px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat',sans-serif;
             letter-spacing: 2px;
         }
-
-        div[class="txt"]>p {
+        div[class="txt"]>p{
             font-family: 'Poppins', sans-serif;
-            line-height: 30px;
+            line-height: 30px; 
             font-size: 20px;
             opacity: 0.5;
             margin: 0px 80px 0px 80px;
@@ -126,31 +112,29 @@
         }
 
 
-        div[class="search"] {
+        div[class="search"]{
             font-family: 'Poppins', sans-serif;
             box-shadow: 1.5px 1.5px 15px 4px rgba(2, 2, 2, 0.275);
             border-radius: 15px;
             padding: 20px;
         }
-
-        div[class="field"] {
+        div[class="field"]{
             margin: 10px 20px 10px 20px;
             font-weight: bolder;
             padding: 0px;
             display: inline-flex;
             flex-direction: row;
-            gap: 16px;
+            gap:16px;
             align-content: baseline;
             justify-content: center;
         }
-
-        div[class="field"]>select {
-
+        div[class="field"]>select{
+            
             color: aliceblue;
             background: none repeat scroll 0 0 #FFFFFF;
             background-color: black;
             border: 1px solid #00000000;
-            border-radius: 6px 3px 6px 3px;
+            border-radius: 6px 3px  6px 3px;
             box-shadow: 0 0 10px #c2c1c198 inset;
             height: 30px;
             margin: 0 0 0 25px;
@@ -158,37 +142,48 @@
             width: 110px;
 
         }
-
-        div[class="clk"]>center>a>button {
+        div[class="clk"]>center>a>button{
             color: black;
             background-color: white;
             height: 40px;
             width: 120px;
             border-radius: 10px 10px 10px 10px;
-
+            
         }
-
-        div[class="clk"]>center>a>button:hover {
+        div[class="clk"]>center>a>button:hover{
             color: white;
             background-color: black;
             font-weight: bold;
             transition: 1200ms;
         }
+        div[class="ftr"]{
+            font-family: 'Poppins', sans-serif;
+            height: 150px;
+            width:100%;
+            border: rgba(111, 111, 111, 0.536) currentColor;
+            background-color:  rgba(111, 111, 111, 0.536);
+            text-align: center;
+            color: rgba(62, 62, 62, 0.574);
+        }
+        div[class="ftr"]>footer>p{
+            margin-top:10px;
+            padding-top: 55px;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+        
     </style>
 </head>
-
 <body>
     <div class="">
         <div class="navbar">
             <div class="logo">
-                <a href="#">
-                    <h2>PRO<span>FIND</span></h2>
-                </a>
+                <a href="#"><h2>PRO<span>FIND</span></h2></a>
             </div>
             <div class="buttons">
                 <li style="left: 30%;">
                     <ul><a href="/logout">Logout</a></ul>
-                    <ul><a href="#">Search</a></ul>
+                    <ul><a href="/user">Search</a></ul>
                     <ul><a href="#">Profile</a></ul>
                     <ul><a href="#">Forums</a></ul>
                 </li>
@@ -198,21 +193,19 @@
             <div class="txt">
                 <br>
                 <h2>SEARCH OUR FACULTY</h2>
-                <p>When conducting a search for faculty members in a college,
-                    a systematic classification process is employed to identify the most suitable candidates.
-                    This classification involves assessing their academic credentials, including degrees and areas of
-                    expertise.
-                    Additionally, their teaching experience and effectiveness are evaluated to ensure they can deliver
-                    quality instruction. Research accomplishments and contributions to their field are also considered
-                    to gauge
-                    their expertise and potential for advancing knowledge. Finally, personal attributes like
-                    communication skills
-                    and a passion for teaching are examined to ensure a well-rounded and dedicated faculty member.</p>
+                <p>When conducting a search for faculty members in a college, 
+                    a systematic classification process is employed to identify the most suitable candidates. 
+                    This classification involves assessing their academic credentials, including degrees and areas of expertise. 
+                    Additionally, their teaching experience and effectiveness are evaluated to ensure they can deliver 
+                    quality instruction. Research accomplishments and contributions to their field are also considered to gauge 
+                    their expertise and potential for advancing knowledge. Finally, personal attributes like communication skills
+                     and a passion for teaching are examined to ensure a well-rounded and dedicated faculty member.</p>
             </div>
         </div>
     </div>
     <br>
     <div class="search">
+        <center>
         <div class="field">
             <label for="">Campus : </label>
             <select name="" id="">
@@ -224,8 +217,8 @@
                 <option value="">Mysore</option>
                 <option value="">None</option>
             </select>
-
-
+            
+            
             <label for="">Degree : </label>
             <select name="" id="">
                 <option value="">B.Tech</option>
@@ -235,7 +228,7 @@
                 <option value="">PhD</option>
                 <option value="">None</option>
             </select>
-
+            
             <label for="">Branch : </label>
             <select name="" id="">
                 <option value="">CSE</option>
@@ -247,7 +240,7 @@
                 <option value="">None</option>
             </select>
 
-
+            
             <label for="">Designation : </label>
             <select name="" id="">
                 <option value="">Dean</option>
@@ -259,7 +252,7 @@
                 <option value="">None</option>
             </select>
 
-
+            
             <label for="">Resaerch Interest : </label>
             <select name="" id="">
                 <option value="">Distributed Databases</option>
@@ -271,14 +264,22 @@
                 <option value="">None</option>
             </select>
         </div>
+        </center>
         &nbsp;
         <br>
         <br>
         <br>
         <div class="clk">
-            <center> <a href="/faculty"><button type="submit">SEARCH</button></center></a>
+           <center> <a href="/faculty"><button type="submit">SEARCH</button></center></a>
         </div>
     </div>
-</body>
+    <div class="ftr">
+        <footer >
+            <p>Copyright &copy; 2023 - All Rights Reserved<a href=""> <i class="fa fa-copyright" aria-hidden="true"></i> </a> <a href=""> <i class="fa fa-copyright" aria-hidden="true"></i> </a><br>
+            PROFIND | Privacy Policy<br>
+            </p>
 
+        </footer>
+    </div>
+</body>
 </html>
