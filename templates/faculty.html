@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty</title>
+  <!-- <link rel="stylesheet" href="nav.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_card.css')}}">
+  <!-- Boxicons CDN Link -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  .navbar {
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 1.5px 1.5px 15px 4px rgba(2, 2, 2, 0.275);
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 35px 60px 35px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+  }
+
+  h2 {
+    letter-spacing: 5px;
+  }
+
+  li {
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+
+  }
+
+  li>ul {
+    list-style: none;
+    font-size: 1rem;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  span {
+    background-color: black;
+    color: whitesmoke;
+    letter-spacing: 7px;
+    padding-left: 7px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    row-gap: 5px;
+
+  }
+
+  .buttons>li>ul:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    font-size: 16px;
+    transition: 400ms;
+    text-shadow: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  .logo {
+    justify-content: start;
+  }
+</style>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <h2>PRO<span>FIND</span></h2>
+      </a>
+    </div>
+    <div class="buttons">
+      <li style="left: 30%;">
+        <ul><a href="/logout">Logout</a></ul>
+        <ul><a href="/user">Search</a></ul>
+        <ul><a href="#">Profile</a></ul>
+        <ul><a href="#">Forums</a></ul>
+      </li>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image"
+          src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=">
+        <div class="title-flex">
+          <h3 class="box-title">Faculty-1</h3>
+          <p class="user-follow-info">17 Projects</p>
+        </div>
+        <p class="description">Embedded</p>
+      </div>
+      <a href="#" class="button">Connect</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image"
+          src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=">
+        <div class="title-flex">
+          <h3 class="box-title">Faculty-2</h3>
+          <p class="user-follow-info">33 Projects</p>
+        </div>
+        <p class="description">Computer networks</p>
+      </div>
+      <a href="#" class="button">Connect</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image"
+          src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=">
+        <div class="title-flex">
+          <h3 class="box-title">Faculty-3</h3>
+          <p class="user-follow-info">26 Projects</p>
+        </div>
+        <p class="description">Cyber security</p>
+      </div>
+      <a href="#" class="button">Connect</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image"
+          src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=">
+        <div class="title-flex">
+          <h3 class="box-title">Faculty-4</h3>
+          <p class="user-follow-info">12 Projects</p>
+        </div>
+        <p class="description">Artifical intellgence</p>
+      </div>
+      <a href="#" class="button">Connect</a>
+    </div>
+  </div>
+
+</html>
+</body>
+
+</html>

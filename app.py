@@ -3,7 +3,6 @@ import json
 from flask import Flask, render_template, redirect, url_for, request, session, jsonify
 from datetime import datetime
 import pymysql
-# from textwrap import indent
 
 
 application = Flask(__name__)
@@ -63,8 +62,15 @@ def login():
 @app.route("/user")
 def user():
     if 'user' in session:
-        return 'Hello world!'
-        # return render_template("os.html")
+        return render_template("search.html")
+    else:
+        return redirect(url_for("login"))
+
+
+@app.route("/faculty")
+def search():
+    if 'user' in session:
+        return render_template("faculty.html")
     else:
         return redirect(url_for("login"))
 
@@ -72,11 +78,6 @@ def user():
 @app.route("/status")
 def status():
     return jsonify(status="active")
-
-
-@app.route("/sysinfo")
-def sysinfo():
-    return json.loads('hbhb')
 
 
 @app.route("/logout")
