@@ -13,19 +13,19 @@ app.secret_key = 'AshbornIsLegend'
 
 rnoo = ''
 
-# mydb = pymysql.connect(
-#     host="softareeng.cfr7joesroih.us-east-1.rds.amazonaws.com",
-#     user="admin",
-#     passwd="password123",
-#     database="softareeng"
-# )
-
 mydb = pymysql.connect(
-    host="localhost",
-    user="root",
-    passwd="",
-    database="SoftareEng"
+    host="softareeng.cfr7joesroih.us-east-1.rds.amazonaws.com",
+    user="admin",
+    passwd="password123",
+    database="softareeng"
 )
+
+# mydb = pymysql.connect(
+#     host="localhost",
+#     user="root",
+#     passwd="",
+#     database="SoftareEng"
+# )
 
 def hash_string(string):
     hash_object = hashlib.sha256()
@@ -139,6 +139,20 @@ def user():
             print(searchfacultyresult)
 
             return render_template("search.html", finfo = searchfacultyresult, roi = searchroiresult, user = session["user"])
+    else:
+        return redirect(url_for("login"))
+
+@app.route("/myData")
+def mydata():
+    if 'user' in session:
+        pass
+    else:
+        return redirect(url_for("login"))
+
+@app.route("/profile/<nameid>")
+def profile(nameid):
+    if 'user' in session:
+        pass
     else:
         return redirect(url_for("login"))
 
