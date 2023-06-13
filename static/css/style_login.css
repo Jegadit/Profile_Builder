@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: #1d1d1d;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,8 +45,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #000000;
-	background-color: #000000;
+	border: 1px solid #1d1d1d;
+	background-color: #1d1d1d;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -81,7 +81,7 @@ form {
 }
 
 input {
-	background-color: #eee;
+	background-color: #e2dfdf;
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -91,8 +91,9 @@ input {
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+  	/* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22); */
+	box-shadow: 5px 5px 15px rgba(137, 134, 134, 0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -159,9 +160,9 @@ input {
 }
 
 .overlay {
-	background: #000000;
-	background: -webkit-linear-gradient(to right, #000000, #000000);
-	background: linear-gradient(to right, #000000, #000000);
+	background: #1d1d1d;
+	background: -webkit-linear-gradient(to right, #1d1d1d, #1d1d1d);
+	background: linear-gradient(to right, #1d1d1d, #1d1d1d);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -194,7 +195,7 @@ input {
 }
 
 .overlay-left {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	transform: translateX(-20%);
 }
 
@@ -203,7 +204,7 @@ input {
 }
 
 .overlay-right {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	right: 0;
 	transform: translateX(0);
 }

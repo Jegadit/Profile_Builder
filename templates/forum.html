@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>landing page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_forum.css')}}">
+  <style>
+    /* Your provided CSS styles */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+      margin-top: -70px;
+    }
+  
+    .card {
+      margin-top: -70px;
+      width: 700px;
+      height: 400px;
+    }
+  
+    .card-header {
+      background-color: #1f1f1f;
+      color: aliceblue;
+      font-weight: bold;
+      font-size: large;
+      font-align: center;
+      padding-top: 15px;
+    }
+  
+    .card-body {
+      background-color: #1f1f1f;
+      overflow-y: auto;
+      padding: 50px 20px 50px 20px;
+    }
+  
+    .list-unstyled {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .message-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+  
+    .message-wrapper {
+      display: flex;
+      display: block;
+      align-items: center;
+    }
+  
+    .message-avatar {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .message-content {
+      background-color: #e9e9e9;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  
+    .message-text {
+      margin: 0;
+      align-items: flex-end;
+    }
+  
+    .card-footer {
+      background-color: #1f1f1f;
+      padding: 10px;
+    }
+  
+    .input-group {
+      margin-top: 10px;
+    }
+  
+    .form-control {
+      border-radius: 6px;
+      width: 80%;
+      height: 45px;
+    }
+  
+    .btn-primary {
+      border-radius: 10;
+    }
+  </style>
+</head>
+<body>
+<!-- Your HTML code -->
+<div class="app">
+  <header class="app-header">
+    <div class="app-header-logo">
+      <div class="logo">
+        <h1 class="logo-title">
+          <span style="color: rgb(104, 104, 104); letter-spacing: 3px;font-weight: bold;">PRO<span style="background-color:#96959362 ;letter-spacing:3px;color:#888884;padding: 2px 4px;">FIND</span></span>
+        </h1>
+      </div>
+    </div>
+    <div class="app-header-navigation">
+    </div>
+    <div class="app-header-actions-buttons">
+      <button class="user-profile">
+        <span>{{user}}</span>
+        <span>
+          <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+        </span>
+      </button>
+    </div>
+    <div class="app-header-mobile">
+      <button class="icon-button large">
+        <i class="ph-list"></i>
+      </button>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="app-body-navigation">
+      <nav class="navigation">
+        <a href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="/forum">
+          <i class="fa-solid fa-inbox"></i>
+          <span>Forums</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </nav>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div style="height: 400px;" class="card">
+              <div class="card-body" id="message-list">
+                <ul class="list-unstyled" id="message-items">
+                  <li class="message-item">
+                    <div class="message-wrapper">
+                    </div>
+                  </li>
+                  <li class="message-item">
+                    <div class="message-wrapper">
+                      {% for i in msgs %}
+                      <br>
+                      <p style="color: whitesmoke;">{{i[0]}}&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                      <div class="message-content">
+                        <p class="message-text">{{i[1]}}</p>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <form id="message-form" action="#" method="post">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type your message" id="message" name="message">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  // JavaScript code to handle the form submission and display the message
+  const messageForm = document.getElementById("message-form");
+  const messageInput = document.getElementById("message-input");
+  const messageList = document.getElementById("message-items");
+
+  messageForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const messageText = messageInput.value;
+    if (messageText.trim() !== "") {
+      const messageItem = document.createElement("li");
+      messageItem.classList.add("message-item");
+      messageItem.innerHTML = `
+        <div class="message-wrapper">
+          <p style="color: whitesmoke;">{{user}}&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <div class="message-content">
+            <p class="message-text">${messageText}</p>
+          </div>
+        </div>
+      `;
+      messageList.appendChild(messageItem);
+      messageInput.value = "";
+    }
+  });
+</script> -->
+
+</body>
+</html>

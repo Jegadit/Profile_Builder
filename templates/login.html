@@ -6,42 +6,41 @@
     <title>SignUp-LogIn</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css')}}">
+    <style>
 
+    </style>
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Change Password</h1>
+            <form action="#" method="post">
+                <h1>Sign-Up</h1>
                 &nbsp;
-                <input type="email" placeholder="Email" />
-                <input type="number" placeholder="OTP" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Retype Password" />
+                <input id="luname" name="luname" type="text" placeholder="name_cse20101" />
+                <input id="lrno" name="lrno" type="text" placeholder="Roll no" />
+                <select style="width: 284px; height: 40px; background-color: #e2dfdf; border: none; margin-top: 8px; margin-bottom: 8px;" name="role" id="role">
+                    <option value="F">&nbsp;&nbsp;&nbsp;&nbsp;Faculty</option>
+                    <option value="S">&nbsp;&nbsp;&nbsp;&nbsp;Student</option>
+                </select>
+                <input id="p1" name="p1" type="password" placeholder="Password" />
+                <input id="p1c" name="p1c" type="password" placeholder="Retype Password" />
                 &nbsp;
-                <div style="display: flex; flex-direction: row; gap: 10px;">
-                    <button type="button">OTP</button>
-                    <button>Change</button>
-                </div>
+                <button>Sign In</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="#" method="post">
                 <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
+                <span> &nbsp;</span>
                 <input id="uname" name="uname" type="text" placeholder="User Name" />
                 <input id="passwd" name="passwd" type="password" placeholder="Password" />
                 <span style="color: red;">
                     {{errorcode}}
                 </span>
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <!-- <a href="#">Forgot your password?</a> -->
+                &nbsp;
+                <button>Log In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -54,9 +53,9 @@
                 <div class="overlay-panel overlay-right">
                     <img src="{{ url_for('static', filename='res/logo.png')}}" alt="LOGO" style="height: 80px;" />
                     <br>
-                    <span style="color: white;">Change Password?</span>
+                    <span style="color: white;">New here?</span>
                     <br>
-                    <button class="ghost" id="signUp">Change</button>
+                    <button class="ghost" id="signUp">Sign-Up</button>
                 </div>
             </div>
         </div>
