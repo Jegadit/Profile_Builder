@@ -142,19 +142,19 @@ def user():
     else:
         return redirect(url_for("login"))
 
-@app.route("/myData")
-def mydata():
-    if 'user' in session:
-        pass
-    else:
-        return redirect(url_for("login"))
+# @app.route("/myData")
+# def mydata():
+#     if 'user' in session:
+#         pass
+#     else:
+#         return redirect(url_for("login"))
 
-@app.route("/profile/<nameid>")
-def profile(nameid):
-    if 'user' in session:
-        pass
-    else:
-        return redirect(url_for("login"))
+# @app.route("/profile/<nameid>")
+# def profile(nameid):
+#     if 'user' in session:
+#         pass
+#     else:
+#         return redirect(url_for("login"))
 
 
 @app.route("/forum", methods=['POST', 'GET'])
