@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>landing page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/640e055277.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_profile.css')}}">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app">
+	<header class="app-header">
+		<div class="app-header-logo">
+			<div class="logo">
+				<h1 class="logo-title">
+					<span style="color: rgb(104, 104, 104); letter-spacing: 3px;font-weight: bold;">PRO<span style="background-color:#96959362 ;letter-spacing:3px;color:#888884;padding: 2px 4px;">FIND</span></span>
+				</h1>
+			</div>
+		</div>
+		<div class="app-header-actions">
+			<button class="user-profile">
+				<span>{{user}}</span>
+				<span>
+					<img src="https://qph.cf2.quoracdn.net/main-qimg-6d72b77c81c9841bd98fc806d702e859-lq" />
+				</span>
+			</button>
+
+	</header>
+	<div class="app-body">
+		<div class="app-body-navigation">
+			<nav class="navigation">
+				<a href="/user">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<span>Search</span>
+				</a>
+				<a href="/mydata">
+					<i class="fa-solid fa-user"></i>
+					<span>Profile</span>
+				</a>
+				<a href="/forum">
+					<i class="fa-solid fa-inbox"></i>
+					<span>Forums</span>
+				</a>
+				<a href="/logout">
+					<i class="fa-solid fa-right-from-bracket"></i>
+					<span>Logout</span>
+				</a>
+			</nav>
+			<footer class="footer">
+				<h1 class="logo-title">
+					<span style="color: rgb(104, 104, 104); letter-spacing: 3px;font-weight: bold;">PRO<span style="background-color:#96959362 ;letter-spacing:3px;color:#888884;padding: 2px 4px;">FIND</span></span>
+				</h1>
+				<div>
+					PROFIND ©<br />
+					All Rights Reserved 2023
+				</div>
+			</footer>
+		</div>
+		<div class="app-body-main-content">
+			<form action="" method="post">
+				<table>
+					<tr>
+						<td><label class="req">Name</td>
+						<td><input class="det" type="text" placeholder="" id ="sname" value="{{data[0][0]}}"></td>
+					</tr>
+					<tr>
+						<td><label class="req">Roll No</td>
+						<td><input class="det" type="text" value="{{data[0][1]}}" id='srno'></td>
+					</tr>
+					<tr>
+						<td><label class="req">Phone</td>
+						<td><input class="det" type="number" value="{{data[0][2]}}" id="sphno"></td>
+					</tr>
+					<tr>
+						<td><label class="req">Mail ID</td>
+						<td><input class="det" type="email" value="{{data[0][3]}}" id="semail"></td>
+					</tr>
+					<tr>
+						<td><label class="req">C.G.P.A</td>
+						<td><input class="det" type="number" value="{{data[0][4]}}" id="scgpa"></td>
+					</tr>
+					<tr>
+						<td><label class="req">Area of interest</td>
+						<td><input class="det" type="text" value="{{data[0][5]}}" id="saoi"></td>
+					</tr>
+				</table>
+				<br>
+				<br>
+				<center><button type="submit" class="btn">Submit</button></center>
+			</form>
+				
+			<section class="transfer-section">
+				<div class="transfer-section-header">
+					<h2>Accomplishments</h2>
+					<div class="filter-options">
+						<p>Prominent endeavours</p>
+						
+					</div>
+				</div>
+				<br><br>
+					<center><form action="">
+						<textarea name="" id="txtarea" cols="80" rows="10" placeholder="Enter the details of your works">
+							{{data[0][6]}}
+						</textarea>
+						<br>
+						<br>
+						<center><button type="submit" class="btn">Submit</button></center>
+					</form></center>
+				</div>
+			</section>
+		<div class="app-body-sidebar">
+			 <section class="payment-section">
+				<h2></h2>
+				<img src="https://qph.cf2.quoracdn.net/main-qimg-6d72b77c81c9841bd98fc806d702e859-lq" alt="" style="margin-left: 5px;height:350px;width:270px;border-radius:8px;margin-top:0;">
+			</section>
+		</div> 
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/phosphor-icons'></script><script  src="./script.js"></script>
+
+</body>
+</html>

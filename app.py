@@ -142,12 +142,27 @@ def user():
     else:
         return redirect(url_for("login"))
 
-# @app.route("/myData")
-# def mydata():
-#     if 'user' in session:
-#         pass
-#     else:
-#         return redirect(url_for("login"))
+@app.route("/mydata")
+def mydata():
+    if 'user' in session:
+        if request.method == "POST":
+            studentdatadb = mydb.cursor()
+            studentdatadb.execute("select * FROM student where ROLLNO = %s", (roll))
+            studentdatadbresult = studentdatadb.fetchall()
+            print(rnoo)
+            print(studentdatadbresult)
+
+            return render_template('profile.html', data = studentdatadbresult)
+        else:
+
+            studentdatadb = mydb.cursor()
+            studentdatadb.execute("select * FROM student where ROLLNO = %s", (roll))
+            studentdatadbresult = studentdatadb.fetchall()
+            print(studentdatadbresult)
+
+            return render_template('profile.html', data = studentdatadbresult)
+    else:
+        return redirect(url_for("login"))
 
 # @app.route("/profile/<nameid>")
 # def profile(nameid):
